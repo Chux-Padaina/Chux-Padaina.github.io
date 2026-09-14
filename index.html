@@ -25,21 +25,36 @@
       </div>
       <address class="contact-card">
         <a href="mailto:aadhavrs99@gmail.com">aadhavrs99@gmail.com</a>
-        <a href="https://www.linkedin.com/in/aadhav-subramanian-861g/">LinkedIn</a>
-        <a href="https://github.com/Chux-Padaina">GitHub</a>
-        <a href="https://chux-padaina.itch.io/">Itch</a>
+        <a href="https://www.linkedin.com/in/aadhav-subramanian-861g/" class="icon-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5.2 8.9h3.1V19H5.2V8.9Zm1.6-4.7c1 0 1.8.7 1.8 1.7S7.8 7.6 6.8 7.6 5 6.9 5 5.9s.8-1.7 1.8-1.7ZM10.2 8.9h3v1.4c.4-.8 1.5-1.6 3.1-1.6 3.3 0 3.9 2.2 3.9 5V19h-3.1v-4.7c0-1.1 0-2.6-1.6-2.6s-1.9 1.2-1.9 2.5V19h-3.1V8.9Z" />
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/Chux-Padaina" class="icon-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3.2a8.8 8.8 0 0 0-2.8 17.1c.4.1.6-.2.6-.4v-1.5c-2.4.5-2.9-1-2.9-1-.4-.9-.9-1.2-.9-1.2-.8-.5.1-.5.1-.5.8.1 1.3.9 1.3.9.8 1.3 2 1 2.5.8.1-.6.3-1 .5-1.2-1.9-.2-3.9-.9-3.9-4.2 0-.9.3-1.7.9-2.3-.1-.2-.4-1.1.1-2.3 0 0 .7-.2 2.4.9.7-.2 1.4-.3 2.1-.3s1.4.1 2.1.3c1.7-1.1 2.4-.9 2.4-.9.5 1.2.2 2.1.1 2.3.5.6.9 1.3.9 2.3 0 3.3-2 4-3.9 4.2.3.3.6.8.6 1.6V20c0 .2.2.5.6.4A8.8 8.8 0 0 0 12 3.2Z" />
+          </svg>
+          GitHub
+        </a>
+        <a href="https://chux-padaina.itch.io/" class="icon-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5.5 4.5h13L20 7.8v2.1c0 1.2-.8 2.2-1.9 2.5V17c0 1.4-1.1 2.5-2.5 2.5H8.4A2.5 2.5 0 0 1 5.9 17v-4.6A2.6 2.6 0 0 1 4 9.9V7.8l1.5-3.3Zm.2 3.6v1.8c0 .5.4.9.9.9s1-.4 1-.9V8.1H5.7Zm3.3 0v1.8c0 .5.4.9.9.9s.9-.4.9-.9V8.1H9Zm3.2 0v1.8c0 .5.4.9.9.9s.9-.4.9-.9V8.1h-1.8Zm3.2 0v1.8c0 .5.4.9.9.9s1-.4 1-.9V8.1h-1.9Zm-7.5 4.1V17c0 .3.2.5.5.5h7.2c.3 0 .5-.2.5-.5v-4.8c-.7-.1-1.3-.4-1.7-.9-.5.6-1.2.9-2 .9s-1.5-.3-2-.9c-.5.6-1.2.9-2 .9h-.5Z" />
+          </svg>
+          Itch
+        </a>
       </address>
     </header>
 
     <main>
       <section id="projects" class="section">
         <div class="section-heading">
-          <h2>Projects</h2>
+          <h2>Selected Work</h2>
           <p>Hover to expand.</p>
         </div>
 
         <div class="project-grid">
-          <article class="project-tile">
+          <article class="project-tile span-60">
             <div class="project-media slideshow-media hollow-slideshow">
               <div class="slideshow-track">
                 <img src="assets/hollow-engine-main.png" alt="Hollow Engine editor viewport with lighting tools and render graph" />
@@ -47,6 +62,7 @@
                 <img src="assets/hollow-engine-radio.png" alt="Hollow Engine material and lighting test with radio model" />
               </div>
             </div>
+            <div class="project-meta"><span>Engine</span><span>No. 01</span></div>
             <h3>Hollow Engine</h3>
             <p class="one-line">Personal-use C++/OpenGL game engine focused on rendering and animation systems.</p>
             <div class="project-details">
@@ -63,7 +79,51 @@
             </div>
           </article>
 
-          <article class="project-tile">
+          <article class="project-tile span-40">
+            <div class="project-media">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="assets/realistic-pbr-renderer.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="project-meta"><span>Renderer</span><span>No. 02</span></div>
+            <h3>Realistic PBR Renderer</h3>
+            <p class="one-line">Real-time PBR rendering work focused on materials, lighting, and visual polish.</p>
+            <div class="project-details">
+              <p>
+                A custom PBR rendering pipeline covering the full path from asset import to final shaded output. The renderer handles mesh/material setup, texture-driven surface parameters, normal mapping, metallic/roughness shading, environment lighting, reflection response, exposure control, tone mapping, and presentation camera movement.
+              </p>
+              <a href="https://github.com/Chux-Padaina/PBR-Renderer">GitHub Repo</a>
+            </div>
+          </article>
+
+          <article class="project-tile span-30">
+            <div class="project-media slideshow-media contribution-slideshow">
+              <div class="slideshow-track">
+                <img src="assets/contribution-unreal-logo.png" alt="Unreal Engine logo" />
+                <img src="assets/contribution-tracker-panel.png" alt="Contribution Tracker main editor panel" />
+                <img src="assets/contribution-color-view.png" alt="Contribution Tracker author color visualization example" />
+                <img src="assets/contribution-review-toast.png" alt="Contribution Tracker review reminder inside Unreal Engine" />
+              </div>
+            </div>
+            <div class="project-meta"><span>Tools</span><span>No. 03</span></div>
+            <h3>Contribution Tracker - Unreal Plugin</h3>
+            <p class="one-line">UE5 editor plugin for contribution metadata, provenance, and project summaries.</p>
+            <div class="project-details">
+              <p>
+                A UE5 editor tool piloted and built for my master’s thesis study, focused on tracking contribution history across student game projects without forcing teams into a heavy documentation process. It attaches metadata to level actors, stores a shared per-level project record, tracks editor events, highlights missing or pending contribution information, and supports batch review from a central control panel. It also captures broader work like testing, organization, and Content Drawer changes, then turns that history into readable summaries for review and portfolio use.
+              </p>
+              <div class="mini-gallery detail-slideshow">
+                <img src="assets/contribution-tracker-panel.png" alt="Contribution Tracker main editor panel" />
+                <img src="assets/contribution-color-view.png" alt="Contribution Tracker author color visualization example" />
+                <img src="assets/contribution-review-toast.png" alt="Contribution Tracker review reminder inside Unreal Engine" />
+                <img src="assets/contribution-thesis-cover.png" alt="Contribution Tracker Purdue thesis title page" />
+              </div>
+              <a href="https://github.com/Chux-Padaina/ContributionTracker">GitHub Repo</a>
+              <a href="https://hammer.purdue.edu/articles/thesis/A_Study_on_the_Usability_of_an_Unreal_Engine_5_Plugin_Embedding_Object-Level_Origin_Authorship_and_Purpose_Metadata_for_Visual_Contribution_Tracking_and_Data_Export/32162631">Paper</a>
+            </div>
+          </article>
+
+          <article class="project-tile span-70">
             <div class="project-media slideshow-media">
               <div class="slideshow-track">
                 <img src="assets/pathtracer-1.png" alt="PathTracer Cornell-style room with emissive light and reflective objects" />
@@ -72,6 +132,7 @@
                 <img src="assets/pathtracer-4.png" alt="PathTracer render with spheres, cube, cone, and indirect lighting" />
               </div>
             </div>
+            <div class="project-meta"><span>Rendering</span><span>No. 04</span></div>
             <h3>Ray Tracing Engine</h3>
             <p class="one-line">GPU path tracer for physically based lighting, reflections, and material experiments.</p>
             <div class="project-details">
@@ -88,49 +149,27 @@
             </div>
           </article>
 
-          <article class="project-tile">
-            <div class="project-media slideshow-media contribution-slideshow">
-              <div class="slideshow-track">
-                <img src="assets/contribution-unreal-logo.png" alt="Unreal Engine logo" />
-                <img src="assets/contribution-tracker-panel.png" alt="Contribution Tracker main editor panel" />
-                <img src="assets/contribution-color-view.png" alt="Contribution Tracker author color visualization example" />
-                <img src="assets/contribution-review-toast.png" alt="Contribution Tracker review reminder inside Unreal Engine" />
-              </div>
-            </div>
-            <h3>Contribution Tracker - Unreal Plugin</h3>
-            <p class="one-line">UE5 editor plugin for contribution metadata, provenance, and project summaries.</p>
-            <div class="project-details">
-              <p>
-                A UE5 editor tool piloted and built for my master’s thesis study, focused on tracking contribution history across student game projects without forcing teams into a heavy documentation process. It attaches metadata to level actors, stores a shared per-level project record, tracks editor events, highlights missing or pending contribution information, and supports batch review from a central control panel. It also captures broader work like testing, organization, and Content Drawer changes, then turns that history into readable summaries for review and portfolio use.
-              </p>
-              <div class="mini-gallery">
-                <img src="assets/contribution-tracker-panel.png" alt="Contribution Tracker main editor panel" />
-                <img src="assets/contribution-color-view.png" alt="Contribution Tracker author color visualization example" />
-                <img src="assets/contribution-review-toast.png" alt="Contribution Tracker review reminder inside Unreal Engine" />
-                <img src="assets/contribution-thesis-cover.png" alt="Contribution Tracker Purdue thesis title page" />
-              </div>
-              <a href="https://github.com/Chux-Padaina/ContributionTracker">GitHub Repo</a>
-              <a href="https://hammer.purdue.edu/articles/thesis/A_Study_on_the_Usability_of_an_Unreal_Engine_5_Plugin_Embedding_Object-Level_Origin_Authorship_and_Purpose_Metadata_for_Visual_Contribution_Tracking_and_Data_Export/32162631">Paper</a>
-            </div>
-          </article>
-
-          <article class="project-tile">
+          <article class="project-tile span-25">
             <div class="project-media">
-              <video autoplay muted loop playsinline preload="metadata">
-                <source src="assets/realistic-pbr-renderer.mp4" type="video/mp4" />
-              </video>
+              <img src="assets/forensics-poster.png" alt="Forensics Simulator research poster" />
             </div>
-            <h3>Realistic PBR Renderer</h3>
-            <p class="one-line">Real-time PBR rendering work focused on materials, lighting, and visual polish.</p>
+            <div class="project-meta"><span>Serious Game</span><span>No. 05</span></div>
+            <h3>Forensics Sim for Law Enforcement Training</h3>
+            <p class="one-line">Unity serious game for guided crime-scene training and procedural learning.</p>
             <div class="project-details">
               <p>
-                A custom PBR rendering pipeline covering the full path from asset import to final shaded output. The renderer handles mesh/material setup, texture-driven surface parameters, normal mapping, metallic/roughness shading, environment lighting, reflection response, exposure control, tone mapping, and presentation camera movement.
+                A browser-playable Unity training simulation for forensic investigation workflows, developed with law-enforcement and forensic-science input. The game models a guided crime-scene scenario where trainees inspect evidence, gather fingerprints, document observations, consult in-game reference material, and progress through procedure-driven objectives. It is currently being used in law-enforcement training in Greece, and our related paper is getting published in EDULEARN 2026.
               </p>
-              <a href="https://github.com/Chux-Padaina/PBR-Renderer">GitHub Repo</a>
+              <div class="mini-gallery detail-slideshow">
+                <img src="assets/forensics-poster.png" alt="Forensics Simulator research poster" />
+                <img src="assets/forensics-room.png" alt="Forensics Simulator crime scene room screenshot" />
+                <img src="assets/forensics-paper-title.png" alt="Forensics Simulator EDULEARN paper title screenshot" />
+              </div>
+              <a href="assets/forensics-poster.png">Poster</a>
             </div>
           </article>
 
-          <article class="project-tile">
+          <article class="project-tile span-50">
             <div class="project-media slideshow-media models-slideshow">
               <div class="slideshow-track">
                 <img src="assets/models-valorant-phantom.png" alt="Valorant-inspired Phantom fanart render" />
@@ -139,6 +178,7 @@
                 <img src="assets/models-creature.png" alt="Creature model and rig render" />
               </div>
             </div>
+            <div class="project-meta"><span>3D Art</span><span>No. 06</span></div>
             <h3>3D Models</h3>
             <p class="one-line">3D models, rigs, and game fanart built for real-time art workflows.</p>
             <div class="project-details">
@@ -156,22 +196,18 @@
             </div>
           </article>
 
-          <article class="project-tile">
+          <article class="project-tile span-25">
             <div class="project-media">
-              <img src="assets/forensics-poster.png" alt="Forensics Simulator research poster" />
+              <img src="assets/itch-showcase-shared-path.png" alt="A Shared Path game jam title screen" />
             </div>
-            <h3>Forensics Sim for Law Enforcement Training</h3>
-            <p class="one-line">Unity serious game for guided crime-scene training and procedural learning.</p>
+            <div class="project-meta"><span>Game Jams</span><span>No. 07</span></div>
+            <h3>Itch Showcase</h3>
+            <p class="one-line">Small game jam projects built under tight 24- or 48-hour deadlines.</p>
             <div class="project-details">
               <p>
-                A browser-playable Unity training simulation for forensic investigation workflows, developed with law-enforcement and forensic-science input. The game models a guided crime-scene scenario where trainees inspect evidence, gather fingerprints, document observations, consult in-game reference material, and progress through procedure-driven objectives. It is currently being used in law-enforcement training in Greece, and our related paper is getting published in EDULEARN 2026.
+                A collection of quick-scope itch.io projects made for short game jams, usually built in 24 or 48 hours.
               </p>
-              <div class="mini-gallery">
-                <img src="assets/forensics-poster.png" alt="Forensics Simulator research poster" />
-                <img src="assets/forensics-room.png" alt="Forensics Simulator crime scene room screenshot" />
-                <img src="assets/forensics-paper-title.png" alt="Forensics Simulator EDULEARN paper title screenshot" />
-              </div>
-              <a href="assets/forensics-poster.png">Poster</a>
+              <a href="https://chux-padaina.itch.io/">Itch.io</a>
             </div>
           </article>
         </div>
