@@ -1,4 +1,4 @@
-# Aadhav Subramanian Portfolio
+# Aadhav's Portfolio
 
 Static portfolio site for graphics programming, rendering, game development, engine tools, and interactive 3D work.
 
