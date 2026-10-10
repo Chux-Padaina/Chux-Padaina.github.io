@@ -9,18 +9,31 @@
       content="Portfolio for Aadhav Subramanian: graphics programming, gameplay systems, Unreal Engine tools, Unity, XR, and simulation projects."
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.documentElement.classList.add('site-loading');
+      window.loadingFallback = setTimeout(() => {
+        document.documentElement.classList.remove('site-loading');
+      }, 12000);
+    </script>
+    <script src="loading.js" defer></script>
   </head>
   <body>
+    <div class="site-loader" role="region" aria-label="Loading portfolio">
+      <div class="loader-content">
+        <span class="loader-monogram" aria-hidden="true">AS<span></span></span>
+        <p class="loader-name">Aadhav Subramanian</p>
+        <div class="loader-status"><span id="loader-label" role="status">Loading portfolio</span><span id="loader-percent" aria-hidden="true">0%</span></div>
+        <div class="loader-bar" role="progressbar" aria-label="Portfolio media loaded" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+        <button class="loader-skip" type="button">Enter site <span aria-hidden="true">&rarr;</span></button>
+      </div>
+    </div>
     <header class="site-header">
       <div class="identity">
         <h1>Aadhav Subramanian</h1>
         <p>
-          I’m a graphics programmer and game developer with experience
-           across rendering systems, engine architecture, technical art, 
-           simulation, mobile game development, and full-stack software.
-           I’ve built games, prototypes, custom OpenGL and Vulkan engine tools, GPU programming projects, 
-           renderers, Unreal Engine plugins, Unity games and sims, 
-           VR tools, and game-ready 3D assets. Most of my work, expertise and interest sit between engineering, art and design.
+          I'm a graphics programmer and game developer focused on real-time rendering, shaders,
+          and gameplay systems. I work with Vulkan, OpenGL, HLSL, UE5, and Unity to build custom
+          renderers, engine tools, shaders, and gameplay prototypes.
         </p>
       </div>
       <address class="contact-card">
@@ -114,11 +127,16 @@
               </div>
             </div>
             <div class="project-meta"><span>Tools</span><span>No. 03</span></div>
-            <h3>Contribution Tracker - Unreal Plugin</h3>
-            <p class="one-line">UE5 editor plugin for contribution metadata, provenance, and project summaries.</p>
+            <h3>UE5 Plugin - Contribution Tracker</h3>
+            <p class="one-line">A UE5 plugin built for my thesis study and used in a pilot test at Purdue University.</p>
             <div class="project-details">
               <p>
-                A UE5 editor tool piloted and built for my master’s thesis study, focused on tracking contribution history across student game projects without forcing teams into a heavy documentation process. It attaches metadata to level actors, stores a shared per-level project record, tracks editor events, highlights missing or pending contribution information, and supports batch review from a central control panel. It also captures broader work like testing, organization, and Content Drawer changes, then turns that history into readable summaries for review and portfolio use.
+                An editor subsystem tracks actor and Asset Registry events, combining actor-local authorship
+                metadata with a persistent per-level history. Features include inherited tags, batch tagging,
+                missing-metadata queues, and reviewable attribution for edits to another user's work.
+                A central panel exports Markdown contribution reports, including asset activity and manual
+                entries for testing and organization. In a five-student pilot, tagging ease averaged 4.8/5
+                and perceived improvement in contribution tracking averaged 4.2/5.
               </p>
               <div class="mini-gallery detail-slideshow">
                 <img src="assets/contribution-tracker-panel.png" alt="Contribution Tracker main editor panel" />
@@ -162,11 +180,13 @@
               <img src="assets/forensics-poster.png" alt="Forensics Simulator research poster" />
             </div>
             <div class="project-meta"><span>Serious Game</span><span>No. 05</span></div>
-            <h3>Forensics Sim for Law Enforcement Training</h3>
-            <p class="one-line">Unity serious game for guided crime-scene training and procedural learning.</p>
+            <h3>Unity Serious Game</h3>
+            <p class="one-line">A forensics simulation for law enforcement training in police academies, developed in collaboration with students and professors at Purdue University.</p>
             <div class="project-details">
               <p>
-                A browser-playable Unity training simulation for forensic investigation workflows, developed with law-enforcement and forensic-science input. The game models a guided crime-scene scenario where trainees inspect evidence, gather fingerprints, document observations, consult in-game reference material, and progress through procedure-driven objectives. It is currently being used in law-enforcement training in Greece, and our related paper is getting published in EDULEARN 2026.
+                Browser-playable Unity simulation featuring interactive evidence inspection, fingerprint
+                collection, and procedural objectives. Developed with law-enforcement and forensic-science
+                input and used in law-enforcement training in Greece.
               </p>
               <div class="mini-gallery detail-slideshow">
                 <img src="assets/forensics-poster.png" alt="Forensics Simulator research poster" />

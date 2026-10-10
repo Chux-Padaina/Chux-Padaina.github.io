@@ -1,3 +1,19 @@
+@font-face {
+  font-family: Cantarell;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/cantarell-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Cantarell;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/cantarell-bold.ttf") format("truetype");
+}
+
 :root {
   --bg: #050608;
   --text: #eef2f4;
@@ -11,12 +27,88 @@
   --metal: #88919a;
   --accent-soft: #272c33;
   --max: 1240px;
-  --radius: 18px;
-  --radius-inner: 12px;
+  --radius: 8px;
+  --radius-inner: 4px;
+  --font: Cantarell, "Segoe UI", sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #050608;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 650ms ease, visibility 650ms;
+}
+
+.site-loading { overflow: hidden; }
+.site-loading .site-loader {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.loader-content { width: min(100%, 340px); text-align: center; }
+.loader-monogram {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 22px;
+  font: 700 32px var(--font);
+  border: 1px solid #282331;
+  border-radius: 50%;
+}
+.loader-monogram span {
+  position: absolute;
+  inset: -1px;
+  border: 2px solid transparent;
+  border-top-color: #8864ff;
+  border-right-color: #8864ff;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px #6942c6);
+  animation: loader-orbit 2.4s linear infinite;
+}
+.loader-name { margin: 0 0 34px; font: 700 24px var(--font); }
+.loader-status { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; }
+#loader-percent { color: var(--accent); font-variant-numeric: tabular-nums; }
+.loader-bar { height: 3px; margin-top: 12px; overflow: hidden; background: #202329; border-radius: 2px; }
+.loader-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+.loader-skip {
+  margin-top: 24px;
+  padding: 10px 14px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+.loader-skip:hover, .loader-skip:focus-visible { color: var(--accent); }
+.site-header, main { transition: opacity 700ms ease, translate 700ms ease; }
+.site-loading .site-header, .site-loading main { opacity: 0; translate: 0 12px; visibility: hidden; }
+@keyframes loader-orbit { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .loader-monogram span { animation: none; }
+  .site-loader, .loader-bar > span, .site-header, main { transition: none; }
+  .site-loading .site-header, .site-loading main { translate: none; }
 }
 
 html {
@@ -28,9 +120,10 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--bg);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font);
   font-size: 16px;
-  line-height: 1.45;
+  line-height: 1.6;
+  letter-spacing: 0;
   min-height: 100vh;
 }
 
@@ -121,11 +214,12 @@ main {
 
 h1 {
   margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(32px, 5vw, 54px);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 0.96;
+  font-family: var(--font);
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
   letter-spacing: 0;
   text-shadow: 0 1px 0 rgb(0 0 0 / 0.45);
 }
@@ -134,7 +228,7 @@ h1 {
   max-width: 760px;
   margin: 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .contact-card {
@@ -148,9 +242,9 @@ h1 {
 
 .contact-card a {
   justify-self: end;
-  padding: 4px 8px;
+  padding: 5px 10px;
   border: 1px solid rgb(182 255 31 / 0.18);
-  border-radius: 999px;
+  border-radius: 5px;
   background: rgb(182 255 31 / 0.03);
 }
 
@@ -183,9 +277,9 @@ h1 {
 
 h2 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(34px, 5vw, 52px);
-  font-weight: 400;
+  font-family: var(--font);
+  font-size: 32px;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--text);
   text-shadow: 0 1px 0 rgb(0 0 0 / 0.45);
@@ -195,7 +289,7 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -276,8 +370,8 @@ h2 {
   color: var(--accent);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  line-height: 1;
+  letter-spacing: 0;
+  line-height: 1.4;
   text-shadow: 0 0 12px rgb(182 255 31 / 0.18);
   text-transform: uppercase;
 }
@@ -492,21 +586,22 @@ h2 {
 .project-tile h3 {
   order: 3;
   margin: 20px 20px 7px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(22px, 2.2vw, 33px);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.08;
+  font-family: var(--font);
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
   color: var(--text);
 }
 
 .span-25 h3,
 .span-30 h3 {
-  font-size: clamp(20px, 1.85vw, 27px);
+  font-size: 22px;
 }
 
 .span-50 h3 {
-  font-size: clamp(21px, 2vw, 29px);
+  font-size: 24px;
 }
 
 .one-line,
